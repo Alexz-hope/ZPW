@@ -1,0 +1,8 @@
+repozytorium - to jet najłatwiej powiedziec folder dla danych ktore moga widziec inne osoby
+github - to jest duzy folder dla uzytkowników  ktory korzysta z funkcji gita
+git - to jest funkcja podzielnia sie z innymi osobami zmianami w projektachh/ uzywana przez witryny webowe odpowiedzalne dla gita
+commit - to jest akutlizowanie pdrogresów wszytkich branchów do main lub dalej w pobocznych branchach
+branch - to jest scieszka odzielona od main ktora robi wlasne zadanie i akutlizuje potem głowna scieszke
+checkout - to jest powracanie z pobocznego(slave) branch do głownego(main/master)
+merge - to jest zieniane tej samej danej rzeczy ktora jest w kazdym brenchu naraz 
+rebase - naprawianie i nadpisanie kopi czego sie ma na poczontek maina/mastera
