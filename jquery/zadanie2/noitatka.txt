@@ -1,0 +1,2 @@
+.before()<p>.prepend()cos tam.append()</p>.after()
+tutaj masz funkcje to jquery
