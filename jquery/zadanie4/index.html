@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" 
+    crossorigin="anonymous"></script>
+    <script> 
+     let klinkiencia =1;
+     let produkt
+        $(function(){
+           $("#kwadrat").click(function(){
+            $("#komunikat").text("kilkniento razy" + klinkiencia++)
+           })
+           $("#naKoniec").click(function(){
+            let vaule =$("input").val();
+            if(vaule.lenght >0)
+            $("ul").append("<li>"+ vaule +"</li>")
+            $("il").first().css({"color":"green",
+                                "font-weight":"bold"});
+            $("input").val("")
+           })
+           $("#naPoczatek").click(function(){
+            let vaule =$("input").val();
+            if(vaule.lenght >0)
+            $("li").prepend("<li>"+ vaule +"</li>")
+            $("li").last().css({
+                "color":"blue",
+                "font-weight":"bold"});
+
+           })
+           $("input").val("")
+            
+        });
+    </script>
+    <style>
+    #kwadrat { width: 150px; height: 150px; background: lightgray; }
+    </style>
+</head>
+<body>
+    <ul id="lista">
+  <li>Chleb</li>
+  <li>Mleko</li>
+</ul>
+<input type="text" id="produkt" placeholder="Nazwa produktu">
+<button id="naKoniec">Dodaj na koniec</button>
+<button id="naPoczatek">Dodaj na początek</button>
+  <p id="komunikat"></p>
+ 
+  <div id="kwadrat"></div>
+</body>
+</html>
