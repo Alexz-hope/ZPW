@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" 
+    crossorigin="anonymous"></script>
+</head>
+<script>
+    $(function(){
+        $("#guzik").click(function(){
+            
+            $("#text").hide();
+        }
+            )
+
+             $("#guzik2").click(function(){
+            
+            $("#text").show();
+        }
+            )
+            $("#guzik3").click(function(){
+            
+            $("#text").toggle(".kolor");
+        }
+            )
+            $("#guzik4").click(function(){
+            
+            $("#text").slideUp();
+        }
+            )
+            $("#guzik5").click(function(){
+            
+            $("#text").slideDown();
+        }
+            )
+            $("#guzik6").click(function(){
+            
+            $("#text").slideToggle();
+        }
+            )
+        $("#sprawdz").click(function(){
+            
+            $("#true").css("background-color","green") ;
+             $("#false").css("background-color","red");
+        }
+            )
+
+    })
+
+</script>
+<style>
+.kolor{
+    background-color: rgb(0, 255, 13);
+    height: 100px;
+}
+</style>
+<body>
+    <p id="text" class="kolor">funny tekst</p>
+   <button id="guzik">zniknij</button>
+   <button id="guzik2">pokaz</button>
+     <button id="guzik3">znknij efekt</button>
+     <button id="guzik4">do gory</button>
+     <button id="guzik5">do dołu</button>
+     <button id="guzik6">oby dwa gora doł</button>
+
+
+
+     <p>do czego służy background-color</p>
+     <div id="radio">
+        
+    <input type="radio" name="radio" id="true">a
+    <br>
+    <input type="radio" name="radio" id="false">b
+    <br>
+    <input type="radio" name="radio" id="false">c
+    <br>
+    <input type="radio" name="radio" id="false">d
+    <br>
+    <button id="sprawdz">sprawdz</button>
+    </div>
+</body>
+</html>
