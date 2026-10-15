@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" 
+    crossorigin="anonymous"></script>
+</head>
+<script>
+    $(function(){
+$("#formularz").submit(function(e){
+    e.preventDefault();
+    if($("#nick").val() === ""){
+        $("#info").text("podaj nick")
+    }else {
+      $("#info").text("przesłano:" + $("#nick").val())  
+    }
+    if($("#haslo").val() !== 6){
+        $("#info").text("haslo jest za krutkie").css("background-color","red")
+    } else{
+         $("#info").text("zalogowano").css("background-color","green")
+    }
+})
+})
+      
+</script>
+<style>
+  
+</style>
+<body>
+    <form id="formularz">
+        <input type="text" id="nick">nick
+        <br>
+        <input type="text"  id="email">email
+        <br>
+        <input type="text"  id="haslo">haslo
+        <br>
+        <button type="submit">wyslij</button>
+    </form>
+    <p id="info"></p>
+</body>
+</html>
