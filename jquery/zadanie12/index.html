@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" 
+    crossorigin="anonymous"></script>
+</head>
+<script>
+    $(function(){
+        $("#kolor").change(function(){
+            $("body").css("background-color",$(this).val())
+        })
+         $("#pizza").change(function(){
+            $("#text").text("do zapłaty :"+ $(this).val() + "zł")
+        })
+        $("#newsletter").change(function(){
+            if($(this).is(":checked")){
+                $("#stan").text("jestes zapisany do newstallera")
+            }else{
+                $("#stan").text("jestes wypisany z newstallera")
+            }
+        })
+          $("#regulamin").change(function(){
+            if($(this).is(":checked")){
+                $("#button").prop("disabled",false)
+            }else{
+                $("#button").prop("disabled",true)
+            }})
+            $("#tekst").on("input",function(){
+                $("#podglond").text($(this).val())
+            })
+          
+            $("#area").on("input",function(){
+               
+                $licznik = 100 -  $(this).val().length;
+                $("#licznik").text("pozostało:"+ $licznik)
+                if($licznik <= 10){
+                    $("#licznik").css("background-color","red")
+                }else{
+                     $("#licznik").css("background-color","white")
+                }
+            })
+})
+      
+</script>
+<style>
+  
+</style>
+<body>
+    <select id="kolor">
+        <option value="white">biały</option>
+        <option value="yellow">zółty</option>
+        <option value="lightblue">niebieski</option>
+        <option value="grey">szary</option>
+    </select>
+    <hr>
+    <select id="pizza">
+        <option value="20">mała(20zl)</option>
+        <option value="30">srednia(30zl)</option>
+        <option value="40">duza(40zl)</option>
+    </select>
+    <hr>
+    <p id="text"></p>
+    <hr>
+    <input type="checkbox"  id="newsletter">chce new slettera
+    <p id="stan"></p>
+    <hr>
+    <input type="checkbox"  id="regulamin">akceptuje regulamin
+    <button id="button" disabled>zajerestuj</button>
+    <p id="stan"></p>
+    <hr>
+    <input type="text" id="tekst">
+    <p>podglond:<span id="podglond"></span></p>
+    <hr>
+    <textarea  id="area" maxlength="100" ></textarea>
+    <p id="licznik"></p>
+</body>
+</html>

@@ -16,7 +16,7 @@ $("#formularz").submit(function(e){
     }else {
       $("#info").text("przesłano:" + $("#nick").val())  
     }
-    if($("#haslo").val() !== 6){
+    if($("#haslo").val()){
         $("#info").text("haslo jest za krutkie").css("background-color","red")
     } else{
          $("#info").text("zalogowano").css("background-color","green")
