@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" 
+    crossorigin="anonymous"></script>
+</head>
+<script>
+    $(function(){
+        $("#blad").click(function(){
+            let imie = $("#imie").val().trim()
+            let nazwisko = $("#nazwisko").val().trim()
+            if(imie === ""){
+                $("#blad").text("pole jest wymagane")
+            }else{
+                $("#blad").text("twoje imie" +imie)
+            }
+            if( nazwisko === "" && nazwisko !==" " ){
+                $("#blad").text("wpisz nazwisko")
+            }else{
+                $("#blad").text("twoje nazwisko" +nazwisko)
+            }
+        })
+            $("#zapisz").click(function(){
+                let ocena = $("#ocena").val().trim()
+                if(isNaN(ocena)){
+                    $("#info").text("ocena musi byc numerem")
+                }else{
+                    $("#info").text("twoja ocena:" + ocena)
+                }
+                if(ocena <=1 && ocena <+6){
+                    $("#info").text("twoja ocena:" + ocena)
+                }else{
+                   $("#info").text("twoja ocena musi byc w zakresie od 1 do 6") 
+                }
+            })
+    })
+      
+</script>
+<style>
+  
+</style>
+<body>
+    <input type="text" id="imie">
+    <br>
+    <input type="text" id="nazwisko">
+   
+    <button id="blad">wyslij</button>
+    
+    <input type="text" id="ocena">
+    <button id="zapisz">zapisz</button>
+    <p id="info"></p>
+</body>
+</html>
